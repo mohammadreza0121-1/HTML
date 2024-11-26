@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اکوسیستم Yocto Project و توزیع‌های پشتیبانی شده</title>
+    <title>پشتیبانی کرنل لینوکس برای پردازنده‌های Layerscape</title>
     <style>
         * {
             box-sizing: border-box;
@@ -42,13 +42,6 @@
             padding: 24px;
         }
 
-        .section-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 16px;
-            color: #1f2937;
-        }
-
         .table-container {
             overflow-x: auto;
             margin-bottom: 24px;
@@ -75,16 +68,22 @@
             text-align: center;
         }
 
-        .yocto-row {
-            background-color: #eff6ff !important;
-        }
-
         tr:nth-child(even) {
             background-color: #f9fafb;
         }
 
         tr:hover {
             background-color: #f3f4f6;
+        }
+
+        .check-icon {
+            color: #22c55e;
+            font-weight: bold;
+        }
+
+        .x-icon {
+            color: #ef4444;
+            font-weight: bold;
         }
 
         .notes-section {
@@ -135,124 +134,43 @@
 <body>
     <div class="card">
         <div class="card-header">
-            <h1 class="card-title">اکوسیستم Yocto Project و توزیع‌های پشتیبانی شده</h1>
+            <h1 class="card-title">پشتیبانی کرنل لینوکس برای پردازنده‌های Layerscape</h1>
         </div>
         <div class="card-content">
-            <div>
-                <h3 class="section-title">توزیع‌های پشتیبانی شده</h3>
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>توزیع</th>
-                                <th class="text-center">نسخه</th>
-                                <th class="text-center">نام رمز</th>
-                                <th>توضیحات</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Yocto Project -->
-                            <tr class="yocto-row">
-                                <td>Yocto Project</td>
-                                <td class="text-center">4.2.999</td>
-                                <td class="text-center">Mickledore</td>
-                                <td>نسخه اصلی و جدیدترین</td>
-                            </tr>
-                            <!-- Ubuntu -->
-                            <tr>
-                                <td rowspan="2">Ubuntu</td>
-                                <td class="text-center">20.04</td>
-                                <td class="text-center">LTS</td>
-                                <td>پشتیبانی بلندمدت</td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">22.04</td>
-                                <td class="text-center">LTS</td>
-                                <td>آخرین نسخه پایدار</td>
-                            </tr>
-                            <!-- Fedora -->
-                            <tr>
-                                <td rowspan="2">Fedora</td>
-                                <td class="text-center">37</td>
-                                <td class="text-center">-</td>
-                                <td>پشتیبانی کامل</td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">38</td>
-                                <td class="text-center">-</td>
-                                <td>آخرین نسخه</td>
-                            </tr>
-                            <!-- CentOS -->
-                            <tr>
-                                <td>CentOS</td>
-                                <td class="text-center">Stream 8</td>
-                                <td class="text-center">-</td>
-                                <td>نسخه پایدار تجاری</td>
-                            </tr>
-                            <!-- Debian -->
-                            <tr>
-                                <td rowspan="2">Debian GNU/Linux</td>
-                                <td class="text-center">11</td>
-                                <td class="text-center">Bullseye</td>
-                                <td>نسخه پایدار</td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">12</td>
-                                <td class="text-center">Bookworm</td>
-                                <td>آخرین نسخه پایدار</td>
-                            </tr>
-                            <!-- OpenSUSE -->
-                            <tr>
-                                <td>OpenSUSE</td>
-                                <td class="text-center">Leap 15.4</td>
-                                <td class="text-center">-</td>
-                                <td>نسخه تجاری پایدار</td>
-                            </tr>
-                            <!-- AlmaLinux -->
-                            <tr>
-                                <td rowspan="2">AlmaLinux</td>
-                                <td class="text-center">8.8</td>
-                                <td class="text-center">-</td>
-                                <td>نسخه پایدار</td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">9.2</td>
-                                <td class="text-center">-</td>
-                                <td>آخرین نسخه</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div>
-                <h3 class="section-title">نسخه‌های کرنل پشتیبانی شده</h3>
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>نوع کرنل</th>
-                                <th class="text-center">نسخه</th>
-                                <th class="text-center">نوع انتشار</th>
-                                <th>ویژگی‌ها</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>LTS Kernel</td>
-                                <td class="text-center">6.1.36</td>
-                                <td class="text-center">بروزرسانی LTS</td>
-                                <td>هسته و مجازی‌سازی</td>
-                            </tr>
-                            <tr>
-                                <td>Mainline Kernel</td>
-                                <td class="text-center">6.1.55</td>
-                                <td class="text-center">نسخه اصلی</td>
-                                <td>هسته و مجازی‌سازی</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>نسخه کرنل</th>
+                            <th class="text-center">LX2160</th>
+                            <th class="text-center">LS1088</th>
+                            <th class="text-center">LS1046</th>
+                            <th class="text-center">LS1028</th>
+                            <th>ویژگی‌ها</th>
+                            <th>توضیحات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>LTS kernel 6.1.36</td>
+                            <td class="text-center"><span class="check-icon">✓</span></td>
+                            <td class="text-center"><span class="check-icon">✓</span></td>
+                            <td class="text-center"><span class="check-icon">✓</span></td>
+                            <td class="text-center"><span class="check-icon">✓</span></td>
+                            <td>Linux kernel core and virtualization</td>
+                            <td>کرنل LTS با پشتیبانی بلندمدت برای تمام پردازنده‌های Layerscape</td>
+                        </tr>
+                        <tr>
+                            <td>Kernel v6.1.55</td>
+                            <td class="text-center"><span class="check-icon">✓</span></td>
+                            <td class="text-center"><span class="x-icon">✕</span></td>
+                            <td class="text-center"><span class="x-icon">✕</span></td>
+                            <td class="text-center"><span class="x-icon">✕</span></td>
+                            <td>Linux kernel core and virtualization</td>
+                            <td>کرنل جدیدتر، فقط برای LX2160 بهینه‌سازی شده</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
             <div class="notes-section">
@@ -265,9 +183,10 @@
                     نکات مهم:
                 </div>
                 <ul class="notes-list">
-                    <li>Yocto Project 4.2.999 (Mickledore) نسخه اصلی و میزبان است</li>
-                    <li>تمام توزیع‌های ذکر شده به عنوان میزبان توسعه پشتیبانی می‌شوند</li>
-                    <li>برای محیط‌های توسعه، استفاده از نسخه‌های LTS توصیه می‌شود</li>
+                    <li>LTS kernel 6.1.36 برای تمام پلتفرم‌های Layerscape توصیه می‌شود</li>
+                    <li>Kernel v6.1.55 فقط برای LX2160 بهینه‌سازی شده است</li>
+                    <li>برای محیط‌های تولیدی، استفاده از نسخه LTS توصیه می‌شود</li>
+                    <li>هر دو نسخه کرنل شامل ویژگی‌های اصلی و پشتیبانی از مجازی‌سازی هستند</li>
                 </ul>
             </div>
         </div>
