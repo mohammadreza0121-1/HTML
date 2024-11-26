@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اکوسیستم Yocto Project و توزیع‌های پشتیبانی شده</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            padding: 20px;
+            line-height: 1.5;
+        }
+
+        .card {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            padding: 24px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: #1f2937;
+        }
+
+        .card-content {
+            padding: 24px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            color: #1f2937;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 24px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #e5e7eb;
+            text-align: right;
+        }
+
+        th {
+            background-color: #f3f4f6;
+            font-weight: bold;
+            color: #1f2937;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .yocto-row {
+            background-color: #eff6ff !important;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+
+        tr:hover {
+            background-color: #f3f4f6;
+        }
+
+        .notes-section {
+            background-color: #dbeafe;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 24px;
+        }
+
+        .notes-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #1e40af;
+        }
+
+        .notes-list {
+            list-style-type: none;
+            padding-right: 20px;
+        }
+
+        .notes-list li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .notes-list li::before {
+            content: "•";
+            position: absolute;
+            right: -20px;
+            color: #1e40af;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                margin: 10px;
+            }
+            
+            td, th {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <h1 class="card-title">اکوسیستم Yocto Project و توزیع‌های پشتیبانی شده</h1>
+        </div>
+        <div class="card-content">
+            <div>
+                <h3 class="section-title">توزیع‌های پشتیبانی شده</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>توزیع</th>
+                                <th class="text-center">نسخه</th>
+                                <th class="text-center">نام رمز</th>
+                                <th>توضیحات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Yocto Project -->
+                            <tr class="yocto-row">
+                                <td>Yocto Project</td>
+                                <td class="text-center">4.2.999</td>
+                                <td class="text-center">Mickledore</td>
+                                <td>نسخه اصلی و جدیدترین</td>
+                            </tr>
+                            <!-- Ubuntu -->
+                            <tr>
+                                <td rowspan="2">Ubuntu</td>
+                                <td class="text-center">20.04</td>
+                                <td class="text-center">LTS</td>
+                                <td>پشتیبانی بلندمدت</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">22.04</td>
+                                <td class="text-center">LTS</td>
+                                <td>آخرین نسخه پایدار</td>
+                            </tr>
+                            <!-- Fedora -->
+                            <tr>
+                                <td rowspan="2">Fedora</td>
+                                <td class="text-center">37</td>
+                                <td class="text-center">-</td>
+                                <td>پشتیبانی کامل</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">38</td>
+                                <td class="text-center">-</td>
+                                <td>آخرین نسخه</td>
+                            </tr>
+                            <!-- CentOS -->
+                            <tr>
+                                <td>CentOS</td>
+                                <td class="text-center">Stream 8</td>
+                                <td class="text-center">-</td>
+                                <td>نسخه پایدار تجاری</td>
+                            </tr>
+                            <!-- Debian -->
+                            <tr>
+                                <td rowspan="2">Debian GNU/Linux</td>
+                                <td class="text-center">11</td>
+                                <td class="text-center">Bullseye</td>
+                                <td>نسخه پایدار</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">12</td>
+                                <td class="text-center">Bookworm</td>
+                                <td>آخرین نسخه پایدار</td>
+                            </tr>
+                            <!-- OpenSUSE -->
+                            <tr>
+                                <td>OpenSUSE</td>
+                                <td class="text-center">Leap 15.4</td>
+                                <td class="text-center">-</td>
+                                <td>نسخه تجاری پایدار</td>
+                            </tr>
+                            <!-- AlmaLinux -->
+                            <tr>
+                                <td rowspan="2">AlmaLinux</td>
+                                <td class="text-center">8.8</td>
+                                <td class="text-center">-</td>
+                                <td>نسخه پایدار</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">9.2</td>
+                                <td class="text-center">-</td>
+                                <td>آخرین نسخه</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="section-title">نسخه‌های کرنل پشتیبانی شده</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>نوع کرنل</th>
+                                <th class="text-center">نسخه</th>
+                                <th class="text-center">نوع انتشار</th>
+                                <th>ویژگی‌ها</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>LTS Kernel</td>
+                                <td class="text-center">6.1.36</td>
+                                <td class="text-center">بروزرسانی LTS</td>
+                                <td>هسته و مجازی‌سازی</td>
+                            </tr>
+                            <tr>
+                                <td>Mainline Kernel</td>
+                                <td class="text-center">6.1.55</td>
+                                <td class="text-center">نسخه اصلی</td>
+                                <td>هسته و مجازی‌سازی</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="notes-section">
+                <div class="notes-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    نکات مهم:
+                </div>
+                <ul class="notes-list">
+                    <li>Yocto Project 4.2.999 (Mickledore) نسخه اصلی و میزبان است</li>
+                    <li>تمام توزیع‌های ذکر شده به عنوان میزبان توسعه پشتیبانی می‌شوند</li>
+                    <li>برای محیط‌های توسعه، استفاده از نسخه‌های LTS توصیه می‌شود</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
