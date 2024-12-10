@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>زمان‌بندی پروژه طراحی برد LS1046A</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+        body {
+            background: #f0f2f5;
+            direction: rtl;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: linear-gradient(45deg, #1a365d, #2563eb);
+            padding: 2rem;
+            border-radius: 1rem 1rem 0 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            color: white;
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .total-time {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            color: white;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .progress-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 0 0 1rem 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .phase {
+            background: #f8fafc;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .phase-header {
+            padding: 1rem;
+            background: #e2e8f0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .phase-header:hover {
+            background: #cbd5e1;
+        }
+
+        .phase-title {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: bold;
+        }
+
+        .phase-duration {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #64748b;
+        }
+
+        .phase-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .phase.active .phase-content {
+            max-height: 500px;
+        }
+
+        .step {
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step:hover {
+            background: #f1f5f9;
+        }
+
+        .progress-bar {
+            height: 4px;
+            background: #e2e8f0;
+            margin: 1rem 0;
+            border-radius: 2px;
+        }
+
+        .progress {
+            height: 100%;
+            background: linear-gradient(45deg, #2563eb, #1a365d);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade {
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .header {
+                padding: 1rem;
+            }
+
+            .header h1 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>زمان‌بندی پروژه طراحی برد LS1046A</h1>
+            <div class="total-time">
+                <i class="fas fa-clock"></i>
+                <span>زمان کل پروژه: ۵.۵ ماه (۱۹ تا ۲۴ هفته)</span>
+            </div>
+        </div>
+        
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress" style="width: 0%"></div>
+            </div>
+
+            <div class="phases">
+                <!-- فاز 1 -->
+                <div class="phase">
+                    <div class="phase-header">
+                        <div class="phase-title">
+                            <i class="fas fa-chevron-left"></i>
+                            <span>فاز ۱: طراحی و مستندسازی</span>
+                        </div>
+                        <div class="phase-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>۸-۱۰ هفته</span>
+                        </div>
+                    </div>
+                    <div class="phase-content">
+                        <div class="step">
+                            <span>بررسی طرح نمونه موجود</span>
+                            <span>۱ هفته</span>
+                        </div>
+                        <div class="step">
+                            <span>طراحی شماتیک جدید</span>
+                            <span>۲-۳ هفته</span>
+                        </div>
+                        <div class="step">
+                            <span>طراحی اولیه PCB</span>
+                            <span>۲ هفته</span>
+                        </div>
+                        <div class="step">
+                            <span>شبیه‌سازی سیگنال با هایپرلینکس</span>
+                            <span>۲ هفته</span>
+                        </div>
+                        <div class="step">
+                            <span>نهایی‌سازی طراحی PCB</span>
+                            <span>۱ هفته</span>
+                        </div>
+                        <div class="step">
+                            <span>بازبینی و اصلاحات نهایی</span>
+                            <span>۱ هفته</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- فاز 2 -->
+                <div class="phase">
+                    <div class="phase-header">
+                        <div class="phase-title">
+                            <i class="fas fa-chevron-left"></i>
+                            <span>فاز ۲: ساخت و مونتاژ نمونه اولیه</span>
+                        </div>
+                        <div class="phase-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>۳-۴ هفته</span>
+                        </div>
+                    </div>
+                    <div class="phase-content">
+                        <div class="step">
+                            <span>سفارش قطعات و PCB</span>
+                            <span>۲ هفته</span>
+                        </div>
+                        <div class="step">
+                            <span>مونتاژ برد</span>
+                            <span>۱ هفته</span>
+                        </div>
+                        <div class="step">
+                            <span>بازبینی اولیه</span>
+                            <span>۱ هفته</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- فاز 3 -->
+                <div class="phase">
+                    <div class="phase-header">
+                        <div class="phase-title">
+                            <i class="fas fa-chevron-left"></i>
+                            <span>فاز ۳: تست سخت‌افزاری</span>
+                        </div>
+                        <div class="phase-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>۴-۵ هفته</span>
+                        </div>
+                    </div>
+                    <div class="phase-content">
+                        <div class="step">
+                            <span>تست‌های پایه الکتریکی</span>
+                            <span>۱ هفته</span>
+                        </div>
+                        <div class="step">
+                            <span>تست‌های عملکردی پورت‌ها</span>
+                            <span>۱-۲ هفته</span>
+                        </div>
+                        <div class="step">
+                            <span>تست تروپوت و پهنای باند</span>
+                            <span>۱ هفته</span>
+                        </div>
+                        <div class="step">
+                            <span>رفع اشکالات</span>
+                            <span>۱ هفته</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- فاز 4 -->
+                <div class="phase">
+                    <div class="phase-header">
+                        <div class="phase-title">
+                            <i class="fas fa-chevron-left"></i>
+                            <span>فاز ۴: تست‌های نرم‌افزاری</span>
+                        </div>
+                        <div class="phase-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>۴-۵ هفته</span>
+                        </div>
+                    </div>
+                    <div class="phase-content">
+                        <div class="step">
+                            <span>راه‌اندازی اولیه سیستم</span>
+                            <span>۱ هفته</span>
+                        </div>
+                        <div class="step">
+                            <span>پیاده‌سازی درایورها</span>
+                            <span>۱-۲ هفته</span>
+                        </div>
+                        <div class="step">
+                            <span>تست‌های نرم‌افزاری عملکردی</span>
+                            <span>۱ هفته</span>
+                        </div>
+                        <div class="step">
+                            <span>بهینه‌سازی و رفع اشکالات</span>
+                            <span>۱ هفته</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // فعال‌سازی باز/بسته شدن فازها
+            const phases = document.querySelectorAll('.phase');
+            phases.forEach(phase => {
+                const header = phase.querySelector('.phase-header');
+                const icon = phase.querySelector('.fa-chevron-left');
+                
+                header.addEventListener('click', () => {
+                    phase.classList.toggle('active');
+                    if (phase.classList.contains('active')) {
+                        icon.style.transform = 'rotate(-90deg)';
+                    } else {
+                        icon.style.transform = 'rotate(0)';
+                    }
+                });
+            });
+
+            // انیمیشن پیشرفت
+            const progress = document.querySelector('.progress');
+            setTimeout(() => {
+                progress.style.width = '25%';
+            }, 500);
+
+            // اضافه کردن انیمیشن به مراحل
+            const steps = document.querySelectorAll('.step');
+            steps.forEach(step => {
+                step.classList.add('animate-fade');
+            });
+        });
+    </script>
+</body>
+</html>
